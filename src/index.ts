@@ -59,9 +59,6 @@ export class TexasHoldem {
   }
 
   setPlayer(cards: string[], name?: string) {
-    if (cards.length > 2) {
-      throw new Error("You can only have 2 cards");
-    }
 
     if (cards.length == 1) {
       throw new Error("You must have 2 cards");
@@ -131,10 +128,6 @@ export class TexasHoldem {
   }
 
   calculate(): SimulationResults {
-    if (this.player.cards.length == 0) {
-      throw new Error("You have no cards. Set your cards with setPlayer()");
-    }
-
     if (this.opponents.length == 0) {
       throw new Error(
         "You have no opponents. Add an opponent with addOpponent()"
