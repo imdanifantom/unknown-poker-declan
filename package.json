@@ -29,6 +29,7 @@
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
-    "jest": "jest"
+    "jest": "jest",
+    "prepare": "tsup src/index.ts --format cjs,esm --dts"
   }
 }
